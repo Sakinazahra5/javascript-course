@@ -28,10 +28,33 @@ for (let i = 5; i <= 10; i++) {
 
 let myArray = ["tom", "jerry", "spike"]
 
-for (let index = 0; index < myArray.length) {
+for (let index = 0; index < myArray.length; index++) {
     const element = myArray[index];
-    console.log(element);
+   // console.log(element);
 }
+
+
+// break and continue
+
+// for (let a = 1; a <= 20; a++) {
+// if (a == 5) {
+//     console.log(`detedced 5`);
+//     break
+// }
+// console.log(`VAlue of a is ${a}`);
+// }
+
+
+for (let a = 1; a <= 20; a++) {
+if (a == 5) {
+    console.log(`detedced 5`);
+    continue
+}
+console.log(`Value of a is ${a}`);
+}
+
+
+
 
 
 
