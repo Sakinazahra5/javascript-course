@@ -28,3 +28,46 @@ if(e.target.id === `purple`){
 }
 })
 });
+
+
+# project 2
+```javascript
+
+const form = document.querySelector(`form`);
+// This use case will give you empty value.
+// const height = parseInt(document.querySelector(`#height`).value);
+// const weight = parseInt(document.querySelector(`#weight`).value);
+
+form.addEventListener(`submit`, function (e) {
+  e.preventDefault();
+
+  const height = parseInt(document.querySelector(`#height`).value);
+  const weight = parseInt(document.querySelector(`#weight`).value);
+  const results = document.querySelector(`#results`);
+
+  // Check if height is valid
+  if (isNaN(height) || height <= 0) {
+    results.innerHTML = `Please give a valid height ${height}`;
+  }
+  // Check if weight is valid
+  else if (isNaN(weight) || weight <= 0) {
+    results.innerHTML = `Please give a valid weight ${weight}`;
+  } else {
+    const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+
+    // Determine BMI category
+    let category = '';
+    if (bmi < 18.6) {
+      category = 'Underweight';
+    } else if (bmi >= 18.6 && bmi <= 24.9) {
+      category = 'Normal BMI';
+    } else {
+      category = 'Overweight';
+    }
+
+    // Display results
+    results.innerHTML = `<span>BMI: ${bmi}</span><br>Category: <strong>${category}</strong>`;
+  }
+});
+
+```
