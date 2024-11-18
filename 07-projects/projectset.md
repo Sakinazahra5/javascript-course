@@ -3,6 +3,8 @@
 ## project 1
 
 # Solution Code
+```javascript
+
 const buttons = document.querySelectorAll(`.button`)
 const body = document.querySelector( `body`)
 
@@ -28,6 +30,8 @@ if(e.target.id === `purple`){
 }
 })
 });
+
+```
 
 
 # project 2
@@ -82,6 +86,5 @@ setInterval(function () {
   //console.log(date.toLocaleTimeString());
   clock.innerHTML = date.toLocaleTimeString();
 }, 1000);
-
 
 ```
